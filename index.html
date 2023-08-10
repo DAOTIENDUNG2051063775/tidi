@@ -1,0 +1,89 @@
+<html
+    __fvdsurfcanyoninserted="1"
+    class="
+        clickberry-extension
+        clickberry-extension-standalone
+        clickberry-extension
+        clickberry-extension-standalone
+        clickberry-extension
+        clickberry-extension-standalone
+    "
+>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- 0. Phần icon của website (thay đổi link đến icon nếu bạn muốn sửa nó) -->
+        <link rel="shortcut icon" type="image/png" href="./birthdayCake.png"/>
+
+        <!-- 1. Đây là phần title của website -->
+        <title>Happy Birthday</title>
+        <link rel="stylesheet" href="./style.css">
+        <script>
+            window.open = function () {};
+            window.print = function () {};
+            // Support hover state for mobile.
+            if (false) {
+                window.ontouchstart = function () {};
+            }
+        </script>
+        <script
+            type="text/javascript"
+            src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"
+        ></script>
+        <meta content="clickberry-extension-here" />
+    </head>
+
+    <body>
+        <link
+            href="https://fonts.googleapis.com/css?family=Wendy+One"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <div class="container">
+            <!-- 2. Dòng chữ Happy Birthday
+            Nếu bạn muốn thêm chữ vào thì phải thay đổi css tương ứng cho nó -->
+            <div class="balloon">
+                <div><span>H</span></div>
+                <div><span>A</span></div>
+                <div><span>P</span></div>
+                <div><span>P</span></div>
+                <div><span>Y</span></div>
+                <div><span>B</span></div>
+                <div><span>I</span></div>
+                <div><span>R</span></div>
+                <div><span>T</span></div>
+                <div><span>H</span></div>
+                <div><span>D</span></div>
+                <div><span>A</span></div>
+                <div><span>Y</span></div>
+            </div>
+            <div class="avatar">
+                <!-- 3. Avatar của người bạn muốn gởi lời chúc -->
+                <img src="./h1.jpg" alt="" class="avatar__img" onclick="showMessage()" />
+                <!-- 4. Tên của người đó -->
+                <h1 onclick="showMessage()" class="avatar__title">Ngô Thảo Hiền_Nochii ❤️ </h1>
+            </div>
+            
+            <!-- 5. Phần nhạc -->
+            <audio id="player" autoplay loop>
+                <source src="./music.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <script>
+            if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage("resize", "*");
+            }
+            function showMessage() {
+                // 6. Lời nhắn hiện ra khi bấm vào tên hoặc avatar
+                swal({
+                    title: "Lời nhắn", // Tiêu đề của popup
+                    text: "Nochii của anh ơi giờ cũng là cuối ngày sinh nhật rùi này, anh mong 1 thứ nghịch nghịch này có thể làm em thoải mái hơn giải tỏa áp lực 1 ngày học tập mệt mỏi, mưa gió ướt lạnh buồn hiu này.Nochii của anh ơi, em hãy luôn vui vẻ và hạnh phúc nhaaa vì Nochii yên tâm đã có anh ở bên em này.Nochii ơi Anh yêu Nochii của anh nhiều lắm❤️ Anh thương em nhiều lắm ❤️ Anh sẽ luôn ở bên Nochii này❤️ Xoa xoaa cho bé yêu của anh ❤️ anh ôm ôm em nì❤️ anh là người đem tới niềm vuiii đầu tiên trong ngày sinh nhật của Nochii và phải thật trọn vẹn anh sẽ là người mang tới niềm vui niềm hạnh phúc bình yên cho Nochii em yêu của anh tới tận cuối ngày sinh nhật ý nghĩa này-Anh sẽ cùng em đi tới tuổi 17 thật đẹp này nhaaaaaa moaaaaaa.Nochii yên tâm ngày nào cũng sẽ thật vui hạnh phúc ý nghĩa như này, ngày nào cũng thật trọn vẹn như này moaaaaa. Cùng anh đi qua bao năm tháng Nochii nhó",// Nội dung lời nhắn
+                    button: {
+                        text: "Đào Tiến Dũng _ TiDi ❤️️",
+                        
+                    },
+                });
+            }
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+</html>
